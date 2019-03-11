@@ -1,10 +1,3 @@
-#DIP Homework Assignment #1
-# 3/09, 2019
-#Name: 廖昱誠
-#ID#: B05902020
-#email: b05902020@ntu.edu.tw
-#compiled on Ubuntu 18.04 with g++
-
 #把source files與raw資料夾放在一起
 
 all:
