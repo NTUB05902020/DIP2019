@@ -30,7 +30,6 @@ void histEqual(unsigned char (*in)[SIZE], unsigned char (*out)[SIZE], int rs, in
 		for(int j=0;j<C;++j) out[rs+i][cs+j] = histHash[in[rs+i][cs+j]];
 }
 
-
 int main(){
 	/*------------read sample2.raw-----------------*/
 	FILE *fp = myOpen("raw/sample2.raw", "rb");

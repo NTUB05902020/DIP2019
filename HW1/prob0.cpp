@@ -13,8 +13,6 @@ FILE *myOpen(const char *name, const char *mode){
 	return ret;
 }
 
-
-
 unsigned char powTrans(unsigned char initial, double exponent){
 	return (unsigned char)round(pow(initial/256.0, exponent) * 256);
 }
