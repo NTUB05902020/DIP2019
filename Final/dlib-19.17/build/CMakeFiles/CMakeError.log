@@ -1,0 +1,51 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /tmp2/b05902020/DIP/dlib-19.17/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/sbin/make cmTC_90ca5/fast 
+/sbin/make -f CMakeFiles/cmTC_90ca5.dir/build.make CMakeFiles/cmTC_90ca5.dir/build
+make[1]: Entering directory '/tmp2/b05902020/DIP/dlib-19.17/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_90ca5.dir/CheckSymbolExists.c.o
+/sbin/cc    -o CMakeFiles/cmTC_90ca5.dir/CheckSymbolExists.c.o   -c /tmp2/b05902020/DIP/dlib-19.17/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_90ca5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90ca5.dir/link.txt --verbose=1
+/sbin/cc      -rdynamic CMakeFiles/cmTC_90ca5.dir/CheckSymbolExists.c.o  -o cmTC_90ca5 
+/sbin/ld: CMakeFiles/cmTC_90ca5.dir/CheckSymbolExists.c.o: in function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: 錯誤：ld 回傳 1
+make[1]: *** [CMakeFiles/cmTC_90ca5.dir/build.make:87: cmTC_90ca5] Error 1
+make[1]: Leaving directory '/tmp2/b05902020/DIP/dlib-19.17/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_90ca5/fast] Error 2
+
+File /tmp2/b05902020/DIP/dlib-19.17/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /tmp2/b05902020/DIP/dlib-19.17/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/sbin/make cmTC_9594b/fast 
+/sbin/make -f CMakeFiles/cmTC_9594b.dir/build.make CMakeFiles/cmTC_9594b.dir/build
+make[1]: Entering directory '/tmp2/b05902020/DIP/dlib-19.17/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9594b.dir/CheckFunctionExists.c.o
+/sbin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9594b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.14/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9594b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9594b.dir/link.txt --verbose=1
+/sbin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_9594b.dir/CheckFunctionExists.c.o  -o cmTC_9594b -lpthreads 
+/sbin/ld: 找不到 -lpthreads
+collect2: 錯誤：ld 回傳 1
+make[1]: *** [CMakeFiles/cmTC_9594b.dir/build.make:87: cmTC_9594b] Error 1
+make[1]: Leaving directory '/tmp2/b05902020/DIP/dlib-19.17/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_9594b/fast] Error 2
+
+
